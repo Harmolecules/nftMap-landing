@@ -1,0 +1,29 @@
+/* Adaptive font size for html */
+$html-font-size-xl: .83333333333vw;
+
+$html-font-size-lg: 1.169590643274854vw;
+
+$html-font-size-sm: 1.61290323vw;
+$html-font-size-xs: 4.266666666666667vw;
+// $html-font-size-xs: 1.169590643274854vw;
+
+$grid-breakpoints: (
+  m-sm: 799px,
+  sm: 800px,
+  m-lg: 1439px,
+  lg: 1440px,
+);
+
+html {
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    font-size: $html-font-size-xl;
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-lg')) {
+    font-size: $html-font-size-lg;
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    font-size: $html-font-size-xs;
+  }
+}

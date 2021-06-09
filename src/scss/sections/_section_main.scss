@@ -1,0 +1,80 @@
+main {
+  position: relative;
+  @include size(100%, auto);
+  // margin-top: 10rem;
+  overflow: hidden;
+
+  .background {
+    position: absolute;
+    @include set-abs-position;
+    @include size(100%);
+    background: url('../static/images/background.png') no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    z-index: -3;
+  }
+
+  .wrapper {
+    padding: 6.25rem 0;
+  }
+
+  .logo {
+    @include size(15.625rem, auto);
+  }
+
+  .title {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 6.25rem;
+    line-height: 7.25rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+
+    div {
+      &:nth-child(n) {
+        display: inline-block;
+      }
+      &:first-child {
+        margin-left: 1.5rem;
+      }
+      &:last-child {
+        margin-left: 5rem;
+      }
+    }
+
+    video {
+      position: absolute;
+      @include size(11.125rem);
+      @include set-abs-position(8.25rem, 5.25rem);
+      z-index: -1;
+      mix-blend-mode: screen;
+    }
+  }
+
+  p {
+    margin-top: 3.1875rem;
+    color: $color-purple-300;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: normal;
+    font-size: 1.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  video.planet-sun {
+    position: absolute;
+    @include set-abs-position(-21rem, 8rem);
+    transform: rotate(90deg);
+    @include size(39.125rem, auto);
+    z-index: -2;
+    display: none;
+
+    @supports (mix-blend-mode: screen) {
+      display: block;
+      mix-blend-mode: screen;
+    }
+  }
+}

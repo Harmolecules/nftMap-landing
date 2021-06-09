@@ -1,0 +1,71 @@
+@import 'colors';
+@import 'mixins';
+@import 'grid';
+@import 'fonts';
+
+html {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #000;
+
+  &.fixed {
+    @include size(100vw, 100vh);
+    overflow: hidden;
+  }
+}
+
+input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: $color-purple-300;
+  text-decoration: underline;
+  transition: .3s ease;
+
+  &:hover {
+    color: $color-purple-400;
+  }
+}
+
+.post-title {
+  font-family: "HelveticaNeue";
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.post-text {
+  font-family: "GeorgiaRegular";
+  font-size: 1.3125rem;
+  line-height: 2rem;
+  letter-spacing: 0.00375rem;
+  color: #C6CDD4;
+
+  &.italic {
+    font-style: italic;
+  }
+}
+
+
+.wrapper {
+  position: relative;
+  @include size(42.5rem, auto);
+  margin: 0 auto;
+}
+
+@import "preloader";
+@import "sections/section_main";
+@import "sections/section_description";
+@import "sections/footer";

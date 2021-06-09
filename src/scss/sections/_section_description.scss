@@ -1,0 +1,151 @@
+section.description {
+  padding-top: 1.5rem;
+  h2 {
+    font-family: "HelveticaNeue";
+    font-size: 2.875rem;
+    line-height: 3.5rem;
+    letter-spacing: 0.03125rem;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    font-family: "HelveticaNeue";
+    font-size: 1.3125rem;
+    line-height: 1.75rem;
+    font-weight: normal;
+    margin-top: .5rem;
+    color: #C6CDD4;
+  }
+
+  .post-stats {
+    @include flex(flex-start, center);
+    margin-top: 1.5rem;
+    .avatar {
+      @include size(1.75rem);
+      border-radius: 50%;
+      background: url(../static/images/avatar.png) no-repeat;
+      background-size: cover;
+    }
+    .team-name {
+      color: #8F5AFF;
+    }
+    p {
+      margin-left: 0.75rem;
+      font-family: 'HelveticaNeue';
+      font-size: 0.75rem;
+    }
+    .btns {
+      margin-left: auto;
+    }
+    img {
+      @include size(1.5625rem);
+
+      &:nth-child(1) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .post-text, .holo {
+    margin-top: 1.5rem;
+  }
+  .holo {
+    @include size(100%, auto);
+  }
+
+  .wrapper {
+    &:not(:first-child) {
+      margin-top: 3.5rem;
+    }
+  }
+
+  .art-preview {
+    position: relative;
+    @include size(100%, 42.75rem);
+    margin-top: 4.375rem;
+
+    .left-content, .right-content {
+      position: absolute;
+      @include size(50%, 100%);
+      top: 0;
+    }
+    .left-content {
+      left: -25%;
+
+      img {
+        position: absolute;
+        @include set-abs-position(50%);
+        transform: translate(-50%, -50%);
+        @include size(19.8125rem, auto);
+      }
+    }
+    .right-content {
+      right: -25%;
+
+      video {
+        position: absolute;
+        @include set-abs-position(50%);
+        transform: translate(-50%, -50%);
+        @include size(32.8125rem, auto);
+        z-index: -1;
+        mix-blend-mode: screen;
+      }
+    }
+
+    p.classic-art, p.digital-art {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-style: normal;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.1875rem;
+      color: $color-purple-500;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .arrow {
+      position: absolute;
+      @include set-abs-position(50%);
+      transform: translate(-50%);
+      width: 8.75rem;
+    }
+  }
+
+  .picture {
+    position: relative;
+    @include size(100%, auto);
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    &.picture-1 {
+      @include size(100%, 41rem);
+    }
+
+    &.picture-2 {
+      @include size(100%, 22.375rem);
+    }
+
+    video {
+      position: absolute;
+      @include size(62.5rem, auto);
+      @include set-abs-position(50%, 0);
+      transform: translate(-50%);
+    }
+  }
+}
+
+
+.full-screen-layer {
+  position: relative;
+  @include size(100%, auto);
+}
+
+.purple-blend {
+  position: absolute;
+  @include size(100%, 20.8675rem);
+  @include set-abs-position(0, -32rem);
+  background: url(../static/images/purple-blend.png) no-repeat;
+  background-size: cover;
+  z-index: -2;
+}

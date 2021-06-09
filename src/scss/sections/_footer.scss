@@ -1,0 +1,35 @@
+footer {
+  padding: 7.75rem 0;
+  .cosmonaut-wrapper {
+    @include size(100%, auto);
+    position: relative;
+    @include flex;
+
+    .purple-blend {
+      top: -6.8rem;
+    }
+
+    video {
+      @include size(25rem, auto);
+      mix-blend-mode: screen;
+    }
+  }
+
+  h3 {
+    font-family: "GeorgiaRegular";
+    font-size: 3rem;
+    line-height: 4rem;
+    letter-spacing: 0.0375rem;
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  p {
+    font-family: "GeorgiaRegular";
+    font-size: 1.1875rem;
+    line-height: 2rem;
+    letter-spacing: 0.0375rem;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+}

@@ -1,0 +1,16 @@
+@mixin flex($justify: center, $align: $justify, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin size($width: auto, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin set-abs-position($left: 0, $top: $left) {
+  left: $left;
+  top: $top;
+}
