@@ -12,6 +12,7 @@ footer {
     video {
       @include size(25rem, auto);
       mix-blend-mode: screen;
+      z-index: -3;
     }
   }
 

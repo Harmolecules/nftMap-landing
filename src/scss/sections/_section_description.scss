@@ -6,6 +6,10 @@ section.description {
     line-height: 3.5rem;
     letter-spacing: 0.03125rem;
     font-weight: bold;
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      font-size: 2.5rem;
+    }
   }
 
   .subtitle {
@@ -25,6 +29,10 @@ section.description {
       border-radius: 50%;
       background: url(../static/images/avatar.png) no-repeat;
       background-size: cover;
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        @include size(2.5rem);
+      }
     }
     .team-name {
       color: #8F5AFF;
@@ -33,6 +41,9 @@ section.description {
       margin-left: 0.75rem;
       font-family: 'HelveticaNeue';
       font-size: 0.75rem;
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        font-size: 1rem;
+      }
     }
     .btns {
       margin-left: auto;
@@ -64,6 +75,13 @@ section.description {
     @include size(100%, 42.75rem);
     margin-top: 4.375rem;
 
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      @include size(60%, 30rem);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 4rem;
+    }
+
     .left-content, .right-content {
       position: absolute;
       @include size(50%, 100%);
@@ -77,6 +95,11 @@ section.description {
         @include set-abs-position(50%);
         transform: translate(-50%, -50%);
         @include size(19.8125rem, auto);
+
+        @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+          width: 120%;
+          top: 55%;
+        }
       }
     }
     .right-content {
@@ -89,6 +112,11 @@ section.description {
         @include size(32.8125rem, auto);
         z-index: -1;
         mix-blend-mode: screen;
+
+        @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+          width: 200%;
+          top: 55%;
+        }
       }
     }
 
@@ -102,6 +130,10 @@ section.description {
       color: $color-purple-500;
       text-transform: uppercase;
       text-align: center;
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        font-size: 1.5rem;
+      }
     }
 
     .arrow {
@@ -109,6 +141,10 @@ section.description {
       @include set-abs-position(50%);
       transform: translate(-50%);
       width: 8.75rem;
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        width: 2rem;
+      }
     }
   }
 
@@ -120,10 +156,18 @@ section.description {
 
     &.picture-1 {
       @include size(100%, 41rem);
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        height: 25rem;
+      }
     }
 
     &.picture-2 {
       @include size(100%, 22.375rem);
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        height: 14rem;
+      }
     }
 
     video {
@@ -131,6 +175,12 @@ section.description {
       @include size(62.5rem, auto);
       @include set-abs-position(50%, 0);
       transform: translate(-50%);
+      border-radius: 2rem;
+      border: .25rem solid rgba(255,255,255,.4);
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        width: 100%;
+      }
     }
   }
 }
